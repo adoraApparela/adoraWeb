@@ -1,0 +1,40 @@
+application: adora-web-project
+version: 1
+runtime: php55
+api_version: 1
+#threadsafe: yes
+
+handlers:
+
+- url: /css
+  static_dir: application/views/css
+  
+- url: /images
+  static_dir: application/views/images
+  
+- url: /js
+  static_dir: application/views/js
+  
+- url: /fonts
+  static_dir: application/views/fonts
+
+- url: /Admincss
+  static_dir: public/bootstrap/css
+
+- url: /Admindist
+  static_dir: public/dist/css
+
+- url: /Adminbjs
+  static_dir: public/bootstrap/js
+
+- url: /Adminplugins
+  static_dir: public/plugins
+
+- url: /Adminpjs
+  static_dir: public/dist/js
+  
+- url: /login/.*
+  script: login.php
+  
+- url: /.*
+  script: index.php
